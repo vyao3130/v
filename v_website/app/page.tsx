@@ -1,47 +1,29 @@
 import Image from "next/image";
-import { Hover } from "./components/mouse_hover";
-import { HeaderDesktop } from "./header_d";
-import { HeaderMobile } from "./header_m";
+import { UseWindowDimensions } from "./components/get_window_dimensions";
+import IconLink from "./components/icon_links";
+import { Blurb } from "./icons/brief_blurb";
 
-// list of sketch buttons to switch things around
+// 
 // resume 
 // side projects
 // scrolling down switches background
 // explanation on how to build site
-//
-//
+// className="absolute bg-sky-900 h-full w-full"
+//Developer with a knack for problem-solving | Proficient in Python, Automation, and Java ► Previous experience at Ericsson
 export default function Home() {
   return (
-    <main className="absolute bg-sky-900 h-full w-full">
-      <div>
-        {window.innerWidth > 1200 ? <HeaderDesktop/>: <HeaderMobile/>}
-        <div className="relative h-32 w-full">
-          <div className="grid grid-cols-6 gap-x-5 items-center pt-6 absolute right-0 top-0">
-            <button className="px-4 py-2 rounded-md border border-black bg-white text-neutarl-700 text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
-              About
-            </button>
-            <button className="px-4 py-2 rounded-md border border-black bg-white text-neutarl-700 text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
-              Experience
-            </button>
-            <button className="px-4 py-2 rounded-md border border-black bg-white text-neutarl-700 text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
-              Work
-            </button>
-            <button className="px-4 py-2 rounded-md border border-black bg-white text-neutarl-700 text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
-              Contact
-            </button>
-            <button className="">
-              resume
-            </button>
+      <main>
+        <div className="bg-slate-200">
+        <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+          <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+            <h1 className="text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">{"Hi! I'm Vivian 👋"}</h1>
+            <h2 className="mt-3 text-lg font-medium tracking-tight text-neutral-950 sm:text-xl">{"Previously Test Engineer at Ericsson ► Developer with a knack for problem-solving ► Proficient in Python and Java"}</h2>
+            <p className="mt-4 max-w-s text-neutral-950 leading-normal">{"I'm a passionate Junior Software Developer with a knack for solving real-world problems through code. With a foundation in technologies like Python, JavaScript, and a flair for modern frameworks such as React and Next.js, I bring my creative ideas to life. My journey has led me through diverse experiences, from streamlining operations with Python at Ericsson to enhancing learning at Queen's University as a Teaching Assistant."}
+            </p>
+            <Blurb/>
+          </header>
           </div>
-
         </div>
-        <Hover/>
-        <div>
-          
-          </div>
-          
-      </div>
-      
     </main>
     
     
